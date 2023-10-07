@@ -1,42 +1,56 @@
-h1 {
-  text-align: center;
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #4918ee;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensures the game is centered vertically */
 }
-#guessed-letters {
-    font-size: 20px;
-    margin-top: 20px;
-  }
 
-#remaining-guesses {
-  margin-top: 20px;
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#word-display {
+    font-size: 24px;
+    margin-bottom: 20px;
+    letter-spacing: 10px;
+}
+
+#wrong-letters {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: red;
 }
 
 #keyboard {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 700px;
-  height: 300px;
-  margin: 0 auto;
-  border: 1px solid black;
-  border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-.letter-button {
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  font-size: 20px;
-}
-.letter-button:hover {
-  background-color: lightgray;
-}
-
-.letter-button:disabled {
-    background-color: gray;
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #174f43;
     color: white;
-  }
-  
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+img {
+    width: 200px;
+}
