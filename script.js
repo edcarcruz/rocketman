@@ -129,10 +129,23 @@ createLetterButtons();
 
 // Update the rocketman display
 function updateRocketman(stateIndex) {
+  // Ensure that the stateIndex is within valid bounds
+  if (stateIndex < 0) {
+    stateIndex = 0;
+  } else if (stateIndex >= rocketmanImages.length) {
+    stateIndex = rocketmanImages.length - 1;
+  }
   const rocketmanImage = document
     .getElementById("rocketman")
     .getElementsByTagName("img")[0];
   rocketmanImage.src = rocketmanImages[stateIndex];
+
+  // Calculate remaining lives, ensuring it's never negative
+  const livesLeft = Math.max(6 - stateIndex, 0);
+
+  // Update the remaining lives display
+  const livesLeftElement = document.getElementById("lives-left");
+  livesLeftElement.textContent = `Lives left: ${livesLeft}`;
 }
 
 // Reset the game

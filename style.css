@@ -32,6 +32,7 @@ h1 {
     font-size: 24px;
     margin-bottom: 20px;
     color: red;
+    text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
 }
 
 #keyboard {
@@ -158,3 +159,13 @@ img {
     background-image: url(img/starry.gif);
     background-size: cover;
 }
+
+#lives-left {
+    font-family: Electrolize, serif;
+    font-size: 18px; 
+    font-weight: bold; 
+    color: #e29c9c; 
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    text-shadow: #000000 2px 2px 2px;
+  }
