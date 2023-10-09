@@ -6,8 +6,9 @@
     <title>Rocketman Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="start-background">
     <h1>Rocketman</h1>
+    <button id="info-button">ℹ️ How to Play</button>
     <div id="win-message" class="hidden">
         <p>Congratulations! You've won!</p>
         <button id="try-again-win">Try Again</button>
@@ -23,6 +24,22 @@
     <div id="wrong-letters"></div>
     <div id="keyboard">
         <!-- Create keyboard buttons dynamically with JavaScript -->
+    </div>
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How to Play</h2>
+            <p>Welcome to Rocketman! Your mission is to guess the hidden word related to space exploration and get our Rocketman on the ship! Here's how to play:</p>
+            <ul>
+              <li>A hidden word related to space will be displayed with underscores representing missing letters.</li>
+              <li>Click on the on-screen keyboard buttons to guess a letter.</li>
+              <li>If the guessed letter is correct, it will be revealed in the word.</li>
+              <li>If the guessed letter is incorrect, it will be added to the list of wrong letters, and the rocketship will get one step closer to takeoff.</li>
+              <li>You have a total of 6 attempts to guess the word correctly. If you run out of attempts, you lose the game and the rocket blasts off without our Rocketman.</li>
+              <li>If you successfully guess the entire word, congratulations, your Rocketman will be off to space!</li>
+            </ul>
+            <p>Click the "Try Again" button to play a new round after winning or losing.</p>
+        </div>
     </div>
 
     <script src="script.js"></script>
