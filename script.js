@@ -13,12 +13,41 @@ const wordList = [
   "astronaut",
   "spaceflight",
   "lightyears",
+  "elton",
+  "planets",
 ];
 let selectedWord = "";
 let guessedWord = [];
 let wrongLetters = [];
 let attempts = 6;
-let availableLetters = "abcdefghijklmnopqrstuvwxyz"; // All available letters
+let availableLetters = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+]; // All available letters
 
 // Define an array of image paths for different states
 const rocketmanImages = [
