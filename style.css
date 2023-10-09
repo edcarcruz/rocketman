@@ -11,6 +11,7 @@ body {
 }
 
 h1 {
+    font-family: Electrolize, serif;
     font-size: 75px;
     margin-bottom: 20px;
     color: #333;
@@ -18,6 +19,7 @@ h1 {
 }
 
 #word-display {
+    font-family: Electrolize, serif;
     font-size: 36px;
     margin-bottom: 20px;
     letter-spacing: 10px;
@@ -26,6 +28,7 @@ h1 {
 }
 
 #wrong-letters {
+    font-family: Electrolize, serif;
     font-size: 24px;
     margin-bottom: 20px;
     color: red;
@@ -39,6 +42,7 @@ h1 {
 }
 
 button {
+    font-family: Electrolize, serif;
     font-size: 18px;
     padding: 10px 20px;
     background-color: #174f43;
@@ -62,11 +66,13 @@ img {
 }
 
 #win-message {
+    font-family: Electrolize, serif;
     font-size: 24px;
     color: green;
     margin-top: 20px;
 }
 #lose-message {
+    font-family: Electrolize, serif;
     font-size: 24px;
     color: red;
     margin-top: 20px;
@@ -113,16 +119,19 @@ img {
 }
 
   #info-modal h2 {
+    font-family: Electrolize, serif;
     font-size: 24px;
     margin-top: 0;
   }
   
   #info-modal p {
+    font-family: Electrolize, serif;
     font-size: 16px;
     line-height: 1.5;
   }
   
   #info-modal ul {
+    font-family: Electrolize, serif;
     margin-left: 20px;
     padding-left: 0;
     list-style-type: none;
