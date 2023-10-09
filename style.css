@@ -54,3 +54,37 @@ button:hover {
 img {
     width: 200px;
 }
+
+.hidden {
+    display: none;
+}
+
+#win-message {
+    font-size: 24px;
+    color: green;
+    margin-top: 20px;
+}
+#lose-message {
+    font-size: 24px;
+    color: red;
+    margin-top: 20px;
+}
+
+#lose-word {
+    font-weight: bold;
+}
+#try-again {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#try-again:hover {
+    background-color: #0056b3;
+}
