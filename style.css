@@ -22,7 +22,7 @@ h1 {
     margin-bottom: 20px;
     letter-spacing: 10px;
     color: #00ff26;
-    text-shadow: #ddd 2px 2px;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; 
 }
 
 #wrong-letters {
