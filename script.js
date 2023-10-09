@@ -18,8 +18,7 @@ let selectedWord = "";
 let guessedWord = [];
 let wrongLetters = [];
 let attempts = 6;
-
-const availableLetters = "abcdefghijklmnopqrstuvwxyz"; // All available letters
+let availableLetters = "abcdefghijklmnopqrstuvwxyz"; // All available letters
 
 // Define an array of image paths for different states
 const rocketmanImages = [
