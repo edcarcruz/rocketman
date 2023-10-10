@@ -13,10 +13,11 @@ const wordList = [
   "astronaut",
   "spaceflight",
   "lightyears",
-  "elton",
-  "planets",
+  "elton john",
+  "planets in space",
+  "deep space exploration",
 ];
-let selectedWord = "";
+let selectedWords = [];
 let guessedWord = [];
 let wrongLetters = [];
 let attempts = 6;
@@ -62,9 +63,9 @@ const rocketmanImages = [
 ];
 
 // Select a random word from the list
-function selectRandomWord() {
-  selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
-  guessedWord = Array(selectedWord.length).fill("_");
+function selectRandomWords() {
+  selectedWords = wordList[Math.floor(Math.random() * wordList.length)].split(" ");
+  guessedWord = selectedWords.map((word) => word.replace(/./g, "_"));
   updateWordDisplay();
 }
 
@@ -81,7 +82,7 @@ function updateWrongLetters() {
 
 // Check if the game is won
 function checkWin() {
-  if (guessedWord.join("") === selectedWord) {
+  if (guessedWord.join(" ") === selectedWords.join(" ")) {
     const winMessage = document.getElementById("win-message");
     winMessage.classList.remove("hidden");
 
@@ -103,7 +104,7 @@ function checkLose() {
   if (attempts === 0) {
     const loseMessage = document.getElementById("lose-message");
     const loseWord = document.getElementById("lose-word");
-    loseWord.textContent = selectedWord; // Set the correct word
+    loseWord.textContent = selectedWords.join(" "); // Set the correct words
     loseMessage.classList.remove("hidden");
 
     // Set gameEnded to true
@@ -121,12 +122,22 @@ function handleGuess(guess) {
     return;
   }
 
-  if (selectedWord.includes(guess)) {
-    for (let i = 0; i < selectedWord.length; i++) {
-      if (selectedWord[i] === guess) {
-        guessedWord[i] = guess;
+  let correctGuess = false;
+  selectedWords.forEach((word, wordIndex) => {
+    if (word.includes(guess)) {
+      correctGuess = true;
+      for (let i = 0; i < word.length; i++) {
+        if (word[i] === guess) {
+          guessedWord[wordIndex] =
+            guessedWord[wordIndex].substring(0, i) +
+            guess +
+            guessedWord[wordIndex].substring(i + 1);
+        }
       }
     }
+  });
+
+  if (correctGuess) {
     updateWordDisplay();
     checkWin();
   } else {
@@ -153,7 +164,7 @@ function createLetterButtons() {
 }
 
 // Initialize the game
-selectRandomWord();
+selectRandomWords();
 createLetterButtons();
 
 // Update the rocketman display
@@ -179,7 +190,7 @@ function updateRocketman(stateIndex) {
 
 // Reset the game
 function resetGame() {
-  selectedWord = "";
+  selectedWords = [];
   guessedWord = [];
   wrongLetters = [];
   attempts = 6;
@@ -187,7 +198,7 @@ function resetGame() {
   updateWrongLetters();
   stateIndex = 0; // Reset the state index to initial state
   updateRocketman(stateIndex); // Update the Rocketman image for reset
-  selectRandomWord();
+  selectRandomWords();
   // Reset the background to the default
   document.body.classList.remove("win-background");
   document.body.classList.add("start-background");
@@ -232,4 +243,4 @@ window.addEventListener("click", function (event) {
 });
 
 // Initialize the game
-selectRandomWord();
+selectRandomWords();
