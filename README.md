@@ -1,6 +1,6 @@
 # rocketman
 This is my project called Rocketman! Based off the timeless game of hangman.
-
+![Alt text](img/screenshot1.png)
 # Tools Used
 HTML5, CSS, Javascript
 
