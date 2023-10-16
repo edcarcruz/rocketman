@@ -5,8 +5,8 @@ This is my project called Rocketman! Based off the timeless game of hangman.
 # Instructions
 ![Alt text](img/screenshot2.png)
 
-# Tools Used
-HTML5, CSS, Javascript
+# Technologies Used
+HTML5, CSS, Javascript, Google Fonts
 
 # Link to my live project
 https://edcarcruz.github.io/rocketman/
