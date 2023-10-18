@@ -164,6 +164,8 @@ function createLetterButtons() {
   }
 }
 
+// Initialize the game
+selectRandomWords();
 createLetterButtons();
 
 // Update the rocketman display
@@ -240,6 +242,3 @@ window.addEventListener("click", function (event) {
     infoModal.style.display = "none";
   }
 });
-
-// Initialize the game
-selectRandomWords();
