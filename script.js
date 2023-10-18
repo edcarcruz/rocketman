@@ -64,7 +64,8 @@ const rocketmanImages = [
 
 // Select a random word from the list
 function selectRandomWords() {
-  selectedWords = wordList[Math.floor(Math.random() * wordList.length)].split(" ");
+  selectedWords =
+    wordList[Math.floor(Math.random() * wordList.length)].split(" ");
   guessedWord = selectedWords.map((word) => word.replace(/./g, "_"));
   updateWordDisplay();
 }
@@ -163,8 +164,6 @@ function createLetterButtons() {
   }
 }
 
-// Initialize the game
-selectRandomWords();
 createLetterButtons();
 
 // Update the rocketman display
