@@ -119,10 +119,6 @@ function handleGuess(guess) {
     return; // Do nothing if the game has ended
   }
 
-  if (!/[a-z]/.test(guess)) {
-    return;
-  }
-
   let correctGuess = false;
   selectedWords.forEach((word, wordIndex) => {
     if (word.includes(guess)) {
