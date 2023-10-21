@@ -15,7 +15,7 @@ Let's get the Rocketman to space! The player has to guess the unknown word with 
 HTML5, CSS, Javascript, Google Fonts
 
 # Next Steps
-Implement a feature that will alow the user to choose from a category of words.
+Implement a feature that will alow the user to choose from a category of words. <br>
 Implement a feature that will display a hint if the word is too hard to guess completely.
 
 # Link to my live project
