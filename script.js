@@ -1,5 +1,4 @@
-console.log("JS linked!");
-
+// Global variables
 let gameEnded = false;
 let stateIndex = 0; // Initialize the state index
 
