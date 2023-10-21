@@ -16,6 +16,7 @@ HTML5, CSS, Javascript, Google Fonts
 
 # Next Steps
 Implement a feature that will alow the user to choose from a category of words.
+Implement a feature that will display a hint if the word is too hard to guess completely.
 
 # Link to my live project
 https://edcarcruz.github.io/rocketman/
